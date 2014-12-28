@@ -1,4 +1,4 @@
-reclass Movie < ActiveRecord::Base
+class Movie < ActiveRecord::Base
 
   #Values for the fields title, released_on, and duration must be present.
   validates :title, :released_on, :duration, presence: true
@@ -45,6 +45,7 @@ reclass Movie < ActiveRecord::Base
     reviews.average(:stars)
     #Because you're inside of an instance method you don't need to use the movie object. The current object (self) will already be set to a movie object and it becomes the implicit receiver of the call to reviews.
   end
+
 end
 
 
