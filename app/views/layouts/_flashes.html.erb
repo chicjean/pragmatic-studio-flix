@@ -1,0 +1,6 @@
+<!--  Not sure what the crap this is. Maybe one day it'll be 
+			explained -->
+
+<%flash.each do |key, value| %>
+  <%= content_tag(:p, value, :class => "flash #{key}") %>
+<% end %>
