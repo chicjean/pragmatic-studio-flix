@@ -37,7 +37,7 @@
         <%= f.file_field :image %>
       </li>
       <li>
-        <%= image_for(@movie) %>
+        <%= image_tag @movie.image.url(:thumb) %>
       </li>
       <li>
         <%= f.label :cast %>

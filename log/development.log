@@ -10016,3 +10016,1320 @@ Processing by MoviesController#index as HTML
   Rendered layouts/_sidebar.html.erb (0.2ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-01 16:33:22 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-01-01 23:33:22.979845') ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (34.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_sidebar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 155ms (Views: 138.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2015-01-01 16:33:23 -0700
+
+
+Started GET "/movies/14" for 127.0.0.1 at 2015-01-01 16:33:26 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  [1m[35m (0.4ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 14]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 14]]
+  Rendered movies/show.html.erb within layouts/application (23.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/system/movies/images/000/000/014/thumb/ironman.jpg?1419995932" for 127.0.0.1 at 2015-01-01 16:33:26 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/014/thumb/ironman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.4ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (37.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-01-01 16:34:28 -0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-01-01 23:34:28.107116') ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    3:     <li>
+    4:       <article class="movie">
+    5:         <header>
+    6:           <%= image_tag @movie.image.url(:thumb) %>
+    7:           <h2><%= link_to movie.title, movie %> (<%= movie.released_on.year %>)</h2>
+    8:           <h3><%= movie.cast %></h3>
+    9:         </header>
+  app/views/movies/index.html.erb:6:in `block in _app_views_movies_index_html_erb___3940317643596169465_70212154283120'
+  app/views/movies/index.html.erb:2:in `_app_views_movies_index_html_erb___3940317643596169465_70212154283120'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-01-01 16:34:28 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-01-01 23:34:28.147965') ORDER BY released_on desc[0m
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    3:     <li>
+    4:       <article class="movie">
+    5:         <header>
+    6:           <%= image_tag @movie.image.url(:thumb) %>
+    7:           <h2><%= link_to movie.title, movie %> (<%= movie.released_on.year %>)</h2>
+    8:           <h3><%= movie.cast %></h3>
+    9:         </header>
+  app/views/movies/index.html.erb:6:in `block in _app_views_movies_index_html_erb___3940317643596169465_70212178974500'
+  app/views/movies/index.html.erb:2:in `_app_views_movies_index_html_erb___3940317643596169465_70212178974500'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-01-01 16:35:18 -0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-01-01 23:35:18.330917') ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-01 16:35:18 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-01-01 16:35:18 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-01-01 16:35:18 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-01-01 16:35:18 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-01-01 16:35:18 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-01-01 16:35:18 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-01-01 16:35:18 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-01 16:35:18 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-01 16:35:18 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-01 16:35:18 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-01-01 16:35:18 -0700
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-01-01 16:35:18 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-01 16:35:18 -0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-01-01 23:35:39.275888') ORDER BY released_on desc[0m
+  Rendered movies/index.html.erb within layouts/application (21.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 27.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+
+Started GET "/system/movies/images/000/000/014/small/ironman.jpg?1419995932" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/014/small/ironman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.9ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (62.5ms)
+
+
+Started GET "/system/movies/images/000/000/012/small/batman-vs-godzilla.jpg?1419996542" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/012/small/batman-vs-godzilla.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (42.2ms)
+
+
+Started GET "/system/movies/images/000/000/006/small/batman-vs-godzilla.jpg?1419996561" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/006/small/batman-vs-godzilla.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (24.9ms)
+
+
+Started GET "/system/movies/images/000/000/001/small/ironman.jpg?1419996575" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/001/small/ironman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (25.2ms)
+
+
+Started GET "/system/movies/images/000/000/005/small/catwoman.jpg?1419996605" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/005/small/catwoman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (20.4ms)
+
+
+Started GET "/system/movies/images/000/000/007/small/ironman.jpg?1419996588" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/007/small/ironman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (18.8ms)
+
+
+Started GET "/system/movies/images/000/000/009/small/spiderman.jpg?1419996641" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/009/small/spiderman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (20.4ms)
+
+
+Started GET "/system/movies/images/000/000/004/small/batman.jpg?1419996658" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/004/small/batman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (16.8ms)
+
+
+Started GET "/system/movies/images/000/000/008/small/superman.jpg?1419996688" for 127.0.0.1 at 2015-01-01 16:35:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/008/small/superman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (16.6ms)
+
+
+Started GET "/movies/14" for 127.0.0.1 at 2015-01-01 16:35:51 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "14"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 14]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 14]]
+  Rendered movies/show.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/system/movies/images/000/000/014/small/ironman.jpg?1419995932" for 127.0.0.1 at 2015-01-01 16:35:51 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/014/small/ironman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (24.8ms)
+
+
+Started GET "/movies/14/edit" for 127.0.0.1 at 2015-01-01 16:35:53 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  Rendered shared/_errors.html.erb (2.9ms)
+  Rendered movies/_form.html.erb (20.0ms)
+  Rendered movies/edit.html.erb within layouts/application (21.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/system/movies/images/000/000/014/small/ironman.jpg?1419995932" for 127.0.0.1 at 2015-01-01 16:35:53 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/014/small/ironman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (31.4ms)
+
+
+Started PATCH "/movies/14" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T0xYIw1ZZTxFbXItDZmqEEqAFaq+F6k0C4STMg3AKOY=", "movie"=>{"title"=>"Iron Man 2", "description"=>"The second one. Number Two. DOS DOS DOS", "rating"=>"PG-13", "released_on(1i)"=>"2014", "released_on(2i)"=>"12", "released_on(3i)"=>"31", "total_gross"=>"234567890", "duration"=>"78", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fb713ba4c90 @tempfile=#<Tempfile:/var/folders/7k/29f1h9q11pvdbp1s_t2h4m380000gn/T/RackMultipart20150101-39691-k3j76b>, @original_filename="ironman.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"movie[image]\"; filename=\"ironman.jpg\"\r\nContent-Type: image/jpeg\r\n">, "cast"=>"", "director"=>""}, "commit"=>"Update Movie", "id"=>"14"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "14"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/var/folders/7k/29f1h9q11pvdbp1s_t2h4m380000gn/T/0d94d92e3dc096f64213a5b34fa9d09820150101-39691-1lnxt9q.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/7k/29f1h9q11pvdbp1s_t2h4m380000gn/T/0d94d92e3dc096f64213a5b34fa9d09820150101-39691-1clpqm9.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/7k/29f1h9q11pvdbp1s_t2h4m380000gn/T/0d94d92e3dc096f64213a5b34fa9d09820150101-39691-1clpqm9.jpg[0]'
+Command :: convert '/var/folders/7k/29f1h9q11pvdbp1s_t2h4m380000gn/T/0d94d92e3dc096f64213a5b34fa9d09820150101-39691-1clpqm9.jpg[0]' -auto-orient -resize "90x133>" '/var/folders/7k/29f1h9q11pvdbp1s_t2h4m380000gn/T/0d94d92e3dc096f64213a5b34fa9d09820150101-39691-1clpqm920150101-39691-1jp84c'
+Command :: file -b --mime '/var/folders/7k/29f1h9q11pvdbp1s_t2h4m380000gn/T/0d94d92e3dc096f64213a5b34fa9d09820150101-39691-1clpqm920150101-39691-1jp84c'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/7k/29f1h9q11pvdbp1s_t2h4m380000gn/T/0d94d92e3dc096f64213a5b34fa9d09820150101-39691-1clpqm9.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/7k/29f1h9q11pvdbp1s_t2h4m380000gn/T/0d94d92e3dc096f64213a5b34fa9d09820150101-39691-1clpqm9.jpg[0]'
+Command :: convert '/var/folders/7k/29f1h9q11pvdbp1s_t2h4m380000gn/T/0d94d92e3dc096f64213a5b34fa9d09820150101-39691-1clpqm9.jpg[0]' -auto-orient -resize "50x50>" '/var/folders/7k/29f1h9q11pvdbp1s_t2h4m380000gn/T/0d94d92e3dc096f64213a5b34fa9d09820150101-39691-1clpqm920150101-39691-13q5gui'
+Command :: file -b --mime '/var/folders/7k/29f1h9q11pvdbp1s_t2h4m380000gn/T/0d94d92e3dc096f64213a5b34fa9d09820150101-39691-1clpqm920150101-39691-13q5gui'
+Command :: file -b --mime '/var/folders/7k/29f1h9q11pvdbp1s_t2h4m380000gn/T/0d94d92e3dc096f64213a5b34fa9d09820150101-39691-gv5nqu.jpg'
+  [1m[35mSQL (1.8ms)[0m  UPDATE "movies" SET "image_updated_at" = ?, "image_file_name" = ?, "updated_at" = ? WHERE "movies"."id" = 14  [["image_updated_at", Thu, 01 Jan 2015 23:36:03 UTC +00:00], ["image_file_name", "ironman.jpg"], ["updated_at", Thu, 01 Jan 2015 23:36:03 UTC +00:00]]
+[paperclip] deleting /Users/Jean/Documents/coding/pragmatic_studio/rails_1/flix-1.3-redesign/public/system/movies/images/000/000/014/original/ironman.jpg
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/14
+Completed 302 Found in 204ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/movies/14" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "14"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 14]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 14]]
+  Rendered movies/show.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-01 16:36:03 -0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-01-01 16:36:08 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-01-01 23:36:08.055775') ORDER BY released_on desc[0m
+  Rendered movies/index.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/system/movies/images/000/000/012/small/batman-vs-godzilla.jpg?1419996542" for 127.0.0.1 at 2015-01-01 16:36:08 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/012/small/batman-vs-godzilla.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (21.0ms)
+
+
+Started GET "/system/movies/images/000/000/007/small/ironman.jpg?1419996588" for 127.0.0.1 at 2015-01-01 16:36:08 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/007/small/ironman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (30.5ms)
+
+
+Started GET "/system/movies/images/000/000/009/small/spiderman.jpg?1419996641" for 127.0.0.1 at 2015-01-01 16:36:08 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/009/small/spiderman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (23.5ms)
+
+
+Started GET "/system/movies/images/000/000/001/small/ironman.jpg?1419996575" for 127.0.0.1 at 2015-01-01 16:36:08 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/001/small/ironman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (20.7ms)
+
+
+Started GET "/system/movies/images/000/000/006/small/batman-vs-godzilla.jpg?1419996561" for 127.0.0.1 at 2015-01-01 16:36:08 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/006/small/batman-vs-godzilla.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (20.4ms)
+
+
+Started GET "/system/movies/images/000/000/005/small/catwoman.jpg?1419996605" for 127.0.0.1 at 2015-01-01 16:36:08 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/005/small/catwoman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (24.5ms)
+
+
+Started GET "/system/movies/images/000/000/004/small/batman.jpg?1419996658" for 127.0.0.1 at 2015-01-01 16:36:08 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/004/small/batman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (18.3ms)
+
+
+Started GET "/system/movies/images/000/000/008/small/superman.jpg?1419996688" for 127.0.0.1 at 2015-01-01 16:36:08 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/008/small/superman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (28.1ms)
+
+
+Started GET "/movies/14" for 127.0.0.1 at 2015-01-01 16:36:32 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "14"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 14]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 14]]
+  Rendered movies/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/14/edit" for 127.0.0.1 at 2015-01-01 16:36:35 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered movies/_form.html.erb (7.6ms)
+  Rendered movies/edit.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-01-01 16:36:37 -0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-01-01 23:36:37.862633') ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/system/movies/images/000/000/012/small/batman-vs-godzilla.jpg?1419996542" for 127.0.0.1 at 2015-01-01 16:36:37 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/012/small/batman-vs-godzilla.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (18.0ms)
+
+
+Started GET "/system/movies/images/000/000/006/small/batman-vs-godzilla.jpg?1419996561" for 127.0.0.1 at 2015-01-01 16:36:37 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/006/small/batman-vs-godzilla.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (25.8ms)
+
+
+Started GET "/system/movies/images/000/000/007/small/ironman.jpg?1419996588" for 127.0.0.1 at 2015-01-01 16:36:37 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/007/small/ironman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (19.4ms)
+
+
+Started GET "/system/movies/images/000/000/001/small/ironman.jpg?1419996575" for 127.0.0.1 at 2015-01-01 16:36:38 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/001/small/ironman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (20.5ms)
+
+
+Started GET "/system/movies/images/000/000/005/small/catwoman.jpg?1419996605" for 127.0.0.1 at 2015-01-01 16:36:38 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/005/small/catwoman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (18.8ms)
+
+
+Started GET "/system/movies/images/000/000/009/small/spiderman.jpg?1419996641" for 127.0.0.1 at 2015-01-01 16:36:38 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/009/small/spiderman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (23.3ms)
+
+
+Started GET "/system/movies/images/000/000/004/small/batman.jpg?1419996658" for 127.0.0.1 at 2015-01-01 16:36:38 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/004/small/batman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (19.3ms)
+
+
+Started GET "/system/movies/images/000/000/008/small/superman.jpg?1419996688" for 127.0.0.1 at 2015-01-01 16:36:38 -0700
+
+ActionController::RoutingError (No route matches [GET] "/system/movies/images/000/000/008/small/superman.jpg"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jean/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/Jean/.rvm/gems/ruby-2.1.3/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (19.1ms)

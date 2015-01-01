@@ -3,7 +3,10 @@ class Movie < ActiveRecord::Base
   has_many :reviews, dependent: :destroy
 
   #Paperclip validation that tells the model that it can have an attachment called image with metadata stored in database fields that have an image_ prefix
-  has_attached_file :image 
+  has_attached_file :image, styles: {
+    small: "90x133>",
+    thumb: "50x50>"
+  }
 
   #Values for the fields title, released_on, and duration must be present.
   validates :title, :released_on, :duration, presence: true
