@@ -1,3 +1,3 @@
 Example Rails application from Pragmatic Studio's Rails 1 course. 
 
-Also on Heroku, here: https://safe-dawn-6268.herokuapp.com/
+Currently running on Heroku, here: https://safe-dawn-6268.herokuapp.com/
