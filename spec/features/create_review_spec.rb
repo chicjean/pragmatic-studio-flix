@@ -6,7 +6,7 @@ describe "Creating a new review" do
 
     visit movie_url(movie)
 
-    click_link 'Write Review'
+    click_link 'Write a Review!'
 
     expect(current_path).to eq(new_movie_review_path(movie))
 
@@ -19,7 +19,7 @@ describe "Creating a new review" do
 
     expect(current_path).to eq(movie_reviews_path(movie))
 
-    expect(page).to have_text("Thanks for your review!")
+    expect(page).to have_text("Review successfully created!")
     expect(page).to have_text("I laughed, I cried, I spilled my popcorn!")
   end
 

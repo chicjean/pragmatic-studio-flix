@@ -7,13 +7,21 @@ module MoviesHelper
    end
  end
  
+ # def image_for(movie)
+ #   if movie.image_file_name.blank?
+ #     image_tag('placeholder.png')
+ #   else
+ #     image_tag(movie.image_file_name)
+ #   end
+ # end
+
  def image_for(movie)
-   if movie.image_file_name.blank?
-     image_tag('placeholder.png')
-   else
-     image_tag(movie.image_file_name)
-   end
- end
+  if movie.image.exists?
+    image_tag(movie.image.url)
+  else
+    image_tag('placeholder.png')
+  end
+end
 
  def format_average_stars(movie)
   if movie.average_stars.nil?

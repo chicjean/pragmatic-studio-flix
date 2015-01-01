@@ -1,5 +1,10 @@
 class Movie < ActiveRecord::Base
 
+  has_many :reviews, dependent: :destroy
+
+  #Paperclip validation that tells the model that it can have an attachment called image with metadata stored in database fields that have an image_ prefix
+  has_attached_file :image 
+
   #Values for the fields title, released_on, and duration must be present.
   validates :title, :released_on, :duration, presence: true
 
@@ -10,12 +15,15 @@ class Movie < ActiveRecord::Base
   validates :total_gross, numericality: { greater_than_or_equal_to: 0 }
 
   #The image_file_name field must be formatted so that the file name has at least one word character and a "gif", "jpg", or "png" extension. This uses a regular expression. 
-  validates :image_file_name, allow_blank: true, format: {
-    with:    /\w+.(gif|jpg|png)\z/i,
-    message: "must reference a GIF, JPG, or PNG image"
-  }
+  # validates :image_file_name, allow_blank: true, format: {
+  #   with:    /\w+.(gif|jpg|png)\z/i,
+  #   message: "must reference a GIF, JPG, or PNG image"
+  # }
 
-  has_many :reviews, dependent: :destroy
+  #Paperclip validation. This ensures that the actual content type of the image file, regardless of the file name extension, is a JPEG or PNG file. 
+   validates_attachment :image, 
+    :content_type => { :content_type => ['image/jpeg', 'image/png'] },
+    :size => { :less_than => 1.megabyte }
 
   #Finally, the rating field must have one of the following values: "G", "PG", "PG-13", "R", or "NC-17". RATINGS is a Ruby constant.
   RATINGS = %w(G PG PG-13 R NC-17)
